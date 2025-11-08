@@ -1,0 +1,278 @@
+/* ===== BODY E BACKGROUND ===== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+
+    /* Background HD */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/fundo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* não repete a imagem */
+    background-attachment: fixed; /* mantém fixa enquanto rola a página */
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+    font-family: 'Cinzel', sans-serif;
+
+    font-size: 2.5em;
+    color: #ebebeb;
+    margin: 0px 0 0px 0;
+    line-height: 0.5;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+
+    color: #bdbdbd;
+    font-size: 1em;
+    margin-bottom: 0px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+h3 {
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== COLUNAS DE OPÇÕES ===== */
+.options-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== SELECTOR DE CADA OPÇÃO ===== */
+.option-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Nome da opção */
+.option-name {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Controles de seleção (botões + miniatura) */
+.option-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-controls img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+/* Botões de seta */
+button.prevBtn, button.nextBtn {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.prevBtn:hover, button.nextBtn:hover {
+    background-color: #555;
+}
+
+/* ===== PRÉVIA DO PERSONAGEM ===== */
+#characterContainer {
+    position: relative;
+    width: 192px;
+    height: 256px;
+    border: 2px solid #444;
+    image-rendering: pixelated;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+#characterContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 192px;
+    height: 256px;
+    image-rendering: pixelated;
+}
+
+/* ===== PERGUNTAS E RESPOSTAS ===== */
+#questionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    width: 650px;
+    margin-bottom: 50px;
+    align-items: center; /* centraliza inputs */
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.question label {
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilo atualizado para textarea, mantendo o mesmo visual do input */
+.question textarea {
+    font-family: 'Poppins', sans-serif;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none; /* impede o usuário de redimensionar manualmente */
+    overflow: hidden; /* esconde a barra de rolagem */
+}
+
+
+/* ===== BOTÕES DE SALVAR E BAIXAR ===== */
+#buttons {
+    display: flex;
+    justify-content: center;  /* centraliza horizontalmente */
+    gap: 20px;                /* espaço entre os botões */
+    margin: 30px 0;
+}
+
+#saveBtn, #downloadBtn {
+    padding: 10px 25px;       /* define o tamanho do botão pelo padding */
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+    cursor: pointer;
+    text-align: center;
+    min-width: 120px;         /* garante um tamanho mínimo */
+}
+
+#saveBtn:hover, #downloadBtn:hover {
+    background-color: #555;
+}
+
+/* Mensagem de confirmação */
+#confirmationMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00ff00;
+    text-align: center;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+    #mainContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #buttons {
+        flex-direction: column; /* empilha os botões em telas pequenas */
+    }
+}
+
+#logoContainer {
+    margin-top: 40px;   /* AQUI você controla quanto desce */
+    text-align: center; /* centraliza a imagem */
+    margin-bottom: 0px; /* distância entre logo e título */
+    line-height: 0;
+}
+
+#logo {
+    width: 300px; /* ajuste o tamanho da imagem */
+    height: auto; /* mantém proporção */
+    line-height: 0;
+}
+
+/* ===== MENU SUPERIOR ===== */
+#topMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    z-index: 9999;
+
+    background: transparent;  /* fundo transparente */
+    backdrop-filter: none;
+
+    transition: transform 0.4s ease; /* animação de subir/descer */
+}
+
+/* links */
+#topMenu a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+
+    /* sombra para ficar visível */
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    transition: 0.2s ease;
+}
+
+#topMenu a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 12px #ffe9a0;
+}
+
+/* Estado escondido do menu */
+#topMenu.hidden {
+    transform: translateY(-100%);
+}
+
+#credits {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffffc7;
+    font-size: 0.9em;
+    text-shadow: 0 0 4px black;
+}

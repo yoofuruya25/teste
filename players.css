@@ -1,0 +1,163 @@
+/* ===== BODY E BACKGROUND ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-image: url('assets/fundo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+        /* Background HD */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/fundo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* não repete a imagem */
+    background-attachment: fixed; /* mantém fixa enquanto rola a página */
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+    font-family: 'Cinzel', sans-serif;
+    font-size: 2.5em;
+    color: #ebebeb;
+    margin: 20px 0 0 0;
+    line-height: 1;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+    color: #bdbdbd;
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* ===== LOGO ===== */
+#logoContainer {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#logo {
+    width: 300px;
+    height: auto;
+}
+
+/* ===== MENU SUPERIOR ===== */
+#topMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    z-index: 9999;
+    background: transparent;
+    transition: transform 0.4s ease;
+}
+
+#topMenu.hidden {
+    transform: translateY(-100%);
+}
+
+#topMenu a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    transition: 0.2s ease;
+}
+
+#topMenu a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 12px #ffe9a0;
+}
+
+/* ===== CONTAINER DE JOGADORES ===== */
+#playersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+/* ===== CARTÃO DE JOGADOR ===== */
+.playerCard {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 15px;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.playerCard:hover {
+    transform: scale(1.02);
+}
+
+/* Foto do jogador */
+.playerPhoto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* Informações do jogador */
+.playerInfo h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.playerInfo p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ebebebc7;
+}
+
+/* Ícone do Instagram */
+.instaIcon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 700px) {
+    .playerCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .playerInfo h3 {
+        justify-content: center;
+    }
+}
+
+.player-username {
+    color: #777671; /* Cor diferente para o @ e o nome */
+    font-weight: bold;
+}
+
